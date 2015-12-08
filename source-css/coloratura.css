@@ -1,40 +1,41 @@
-/*** Post title spoilers ***/
-
-.thing[data-fullname="t3_2jutko"] .entry a.title { font-size:0 !important; }
-.thing[data-fullname="t3_2jutko"] .entry a.title::before { font-size: medium !important; content: "Sonata by conbudou "; }
-
 /*** Thumbnails ***/
 
 .thumbnail:empty { background-image: url(%%thumbnails%%) !important }
-.thumbnail.self { background-position: -0px -120px !important }
+.thumbnail.self { background-position: 0 -120px !important }
 .thumbnail.nsfw { visibility: hidden !important }
-.thumbnail.default { background-position: -0px -70px !important }
+.thumbnail.default { background-position: 0 -70px !important }
 
 .linkflair-spoilers .thumbnail img { display: none }
 
 .linkflair-spoilers .thumbnail {
-  background-image: url(%%thumbnails%%) !important;
   height: 70px;
-  background-position: 0 0 !important;
+  background-image: url(%%thumbnails%%) 0 0 !important;
 }
 
 .linkflair-spoilers[data-fullname$="d"] .thumbnail, .linkflair-spoilers[data-fullname$="i"] .thumbnail,
 .linkflair-spoilers[data-fullname$="s"] .thumbnail, .linkflair-spoilers[data-fullname$="c"] .thumbnail,
 .linkflair-spoilers[data-fullname$="e"] .thumbnail, .linkflair-spoilers[data-fullname$="n"] .thumbnail,
-.linkflair-spoilers[data-fullname$="t"] .thumbnail, .linkflair-spoilers[data-fullname$="a"] .thumbnail { background-position: -0px -170px !important }
+.linkflair-spoilers[data-fullname$="t"] .thumbnail, .linkflair-spoilers[data-fullname$="a"] .thumbnail { background-position: 0 -170px !important }
 
 .linkflair-spoilers .thumbnail.self { height: 64px !important }
+
+.linkflair-titlespoiler .linkflairlabel { display: none }
+.linkflair-titlespoiler p.title a.title { opacity: 0 }
+.linkflair-titlespoiler p.title a.title:hover { opacity: 1 }
+.linkflair-titlespoiler p.title:before { content: "[SPOILER] " }
+.flairselector .linkflairlabel { display: unset }
+
 
 /*** Rating Tags ***/
 
 .nsfw-stamp {
   color: #5f99cf;
-  padding: 0px 3px !important;
+  padding: 0 3px !important;
 }
 
 .nsfw-stamp acronym{
   display: inline-block;
-  font-size: 0px !important;
+  font-size: 0 !important;
 }
 
 .nsfw-stamp acronym:after{
@@ -66,68 +67,22 @@
 
 /*** Theme ***/
 
-#header-img { margin-bottom: -2px }
+#header-img { margin: -1px 0 -30px 8px }
+.content { margin-top: 24px }
 
 .side h6 del { color: inherit }
 .side sup:nth-of-type(1) { padding-left: 40px }
 .side .usertext-body ul a { font-weight: bold }
 
-body { background: url(%%background%%) no-repeat center }
-body.wiki-page { background: none }
-
-/*START-TACOS{color:red}
-body { background: url(%%tuesdaybackground%%) no-repeat fixed center bottom }
-END-TACOS{color:red}*/
-
 .subscribers .word, .users-online .word { display: none }
-.subscribers .number:after { content: " admirers" }
-.users-online .number:after { content: " showing their adoration" }
+.subscribers .number:after { content: " with tickets" }
+.users-online .number:after { content: " at the show" }
 
 .sidecontentbox .helplink + .title h1 { font-size: 0 !important }
 .sidecontentbox .helplink + .title h1:before { font-size: 10pt !important; content: "ROADIES" }
-.sidecontentbox .helplink+.title+.content li:nth-of-type(6n) { display: none }
-
-
-.link .arrow.down:hover:before, .link .arrow.downmod:hover:before {
-  position: absolute;
-  display: block; 
-  z-index: 500;
-  content: "For Realzies?";
-  color: black;
-  background-color: white; 
-  border: 2px solid Black;
-  border-radius: 4px;
-  font-size: 11px;
-  font-weight: bold;
-  margin-left: 20px;
-  margin-top: 7px;
-  padding: 5px;
-  text-align: center;
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
-}
+.sidecontentbox .helplink+.title+.content li:nth-of-type(2n) { display: none }
 
 /*** Comments ***/
-
-a[href|="/spoiler"] {
-  background: #000 !important;
-  color: #000 !important;
-}
-
-a[href|="/spoiler"]:hover {
-    color: #fff !important;
-}
-
-a[href|="/asadagio"], a[href|="/asad"] {
-  color: #FE8800 !important;
-}
-
-a[href|="/asaria"], a[href|="/asab"] {
-  color: #692989 !important;
-}
-
-a[href|="/assonata"], a[href|="/assd"] {
-  color: #51ABC7 !important;
-}
 
 a[href|="/sp"] {
   display: inline-block;
@@ -141,7 +96,43 @@ a[href^="/"][href*="-in-"], a[href^="/"][href$="-in"], a[href^="/"][href*="-inp-
   display: inline-block !important;
 }
 
-/*** Emotes & Flair ***/
+a[href|="/spoiler"] {
+  background: #000 !important;
+  color: #000 !important;
+}
+
+a[href|="/spoiler"]:hover {
+  color: #fff !important;
+}
+
+a[href="/s"] {
+  color: #222222; 
+  background: #CCCCCC;
+  cursor: default;
+} 
+
+a[href="/s"]:hover {
+  color: #8F8F8F 
+} 
+
+a[href="/s"]::after { 
+  content: attr(title);
+  background: #CCCCCC;
+  color: #CCCCCC;
+  padding: 0px 10px 0px 10px;
+}
+
+a[href="/s"]:hover::after {
+  color: black;
+}
+
+/*** Arrows ***/
+
+.arrow.upmod, .arrow.downmod, .arrow.up, .arrow.down { background-image: url(%%hoovsies%%) }
+.arrow.upmod { background-position: 0 0 }
+.arrow.downmod { background-position: 0 -14px }
+.arrow.up { background-position: 0 -28px }
+.arrow.down { background-position: 0 -42px }
 
 /*---------------- Standardized Segment ----------------*/
 
@@ -510,222 +501,33 @@ a[href|="/applederp"],a[href|="/rapplederp"],a[href|="/ppseesyou"],a[href|="/rpp
 
 /*---------------- END COPY ----------------*/
 
-a[href="/forrealzies"],a[href="/rforrealzies"]
-{display:block;clear:none;float:left;width:195px;height:205px;background-image:url(%%forrealzies%%)!important}
-
-a[href|="/sonatatuesday"],a[href|="/sdtuesday"],a[href|="/didsomeponysaytuesday"]
-{display:block;clear:none;float:left;width:292px;height:200px;background-image:url(%%tuesday%%)!important}
-
-a[href|="/sonatalook"],a[href|="/sdlook"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%ponysonata-sheet%%)!important; background-position: 0 0;}
-
-a[href|="/rsonatalook"],a[href|="/rsdlook"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%ponysonata-sheet%%)!important; background-position: 0 -100%;}
-
-a[href|="/starenata"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%ponysonata-sheet%%)!important; background-position: -100% -100%;}
-
-a[href|="/rstarenata"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%ponysonata-sheet%%)!important; background-position: -100% 0;}
-
-a[href|="/slynata"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%ponysonata-sheet%%)!important; background-position: -200% 0;}
-
-a[href|="/rslynata"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%ponysonata-sheet%%)!important; background-position: -200% -100%;}
-
-a[href|="/sonatarage"],a[href|="/sdrage"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%ponysonata-sheet%%)!important; background-position: -300% 0;}
-
-a[href|="/rsonatarage"],a[href|="/rsdrage"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%ponysonata-sheet%%)!important; background-position: -300% -100%;}
-
-a[href|="/sonatamused"],a[href|="/sdmused"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%ponysonata-sheet%%)!important; background-position: 0 -200%;}
-
-a[href|="/rsonatamused"],a[href|="/rsdmused"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%ponysonata-sheet%%)!important; background-position: 0 -300%;}
-
-a[href|="/sonatajoy"],a[href|="/sdjoy"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%ponysonata-sheet%%)!important; background-position: -100% -200%;}
-
-a[href|="/rsonatajoy"],a[href|="/rsdjoy"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%ponysonata-sheet%%)!important; background-position: -100% -300%;}
-
-a[href|="/sonataponyshrug"],a[href|="/sdpshrug"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%ponysonata-sheet%%)!important; background-position: -200% -200%;}
-
-a[href|="/rsonataponyshrug"],a[href|="/rsdpshrug"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%ponysonata-sheet%%)!important; background-position: -200% -300%;}
-
-a[href|="/sonataooh"],a[href|="/sdooh"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%ponysonata-sheet%%)!important; background-position: -300% -200%;}
-
-a[href|="/rsonataooh"],a[href|="/rsdooh"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%ponysonata-sheet%%)!important; background-position: -300% -300%;}
-
-a[href|="/lostsonata"],a[href|="/lostsd"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%ponysonata-sheet%%)!important; background-position: -0% -400%;}
-
-a[href|="/sonatateehee"],a[href|="/sdteehee"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%ponysonata-sheet%%)!important; background-position: -100% -400%;}
-
-a[href|="/nervoussonata"],a[href|="/nervoussd"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%ponysonata-sheet%%)!important; background-position: -200% -400%;}
-
-a[href|="/sonatahmmm"],a[href|="/sdhmmm"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%ponysonata-sheet%%)!important; background-position: -300% -400%;}
-
-a[href|="/sonatasad"],a[href|="/sdsad"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%ponysonata-sheet%%)!important; background-position: -0% -600%;}
-
-a[href|="/wmsonata"],a[href|="/wmsd"]
-{display:block;clear:none;float:left;width:174px;height:200px;background-image:url(%%wmsonata%%)!important; background-position: 0 0;}
-
-a[href|="/sonatabattle"],a[href|="/sdbattle"],a[href|="/rsonatabattle"],a[href|="/rsdbattle"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%sonata-sheet%%)!important; background-position: 0 0;}
-
-a[href|="/sonatagrin"],a[href|="/sdgrin"],a[href|="/rsonatagrin"],a[href|="/rsdgrin"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%sonata-sheet%%)!important; background-position: -100% 0;}
-
-a[href|="/naivesonata"],a[href|="/naivesd"],a[href|="/rnaivesonata"],a[href|="/rnaivesd"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%sonata-sheet%%)!important; background-position: -200% 0;}
-
-a[href|="/sonatasmirk"],a[href|="/sdsmirk"],a[href|="/rsonatasmirk"],a[href|="/rsdsmirk"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%sonata-sheet%%)!important; background-position: -300% 0;}
-
-a[href|="/sonatasiren"],a[href|="/sdsiren"],a[href|="/rsonatasiren"],a[href|="/rsdsiren"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%sonata-sheet%%)!important; background-position: 0 -100%;}
-
-a[href|="/sonatashrug"],a[href|="/sdshrug"],a[href|="/rsonatashrug"],a[href|="/rsdshrug"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%sonata-sheet%%)!important; background-position: -100% -100%;}
-
-a[href|="/cutesonata"],a[href|="/cutesd"],a[href|="/rcutesonata"],a[href|="/rcutesd"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%sonata-sheet%%)!important; background-position: -200% -100%;}
-
-a[href|="/confidentsonata"],a[href|="/confidentsd"],a[href|="/rconfidentsonata"],a[href|="/rconfidentsd"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%sonata-sheet%%)!important; background-position: -300% -100%;}
-
-a[href|="/fearfulsonata"],a[href|="/fearfulsd"],a[href|="/rfearfulsonata"],a[href|="/rfearfulsd"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%sonata-sheet%%)!important; background-position: 0 -200%;}
-
-a[href|="/sonatapunch"],a[href|="/sdpunch"],a[href|="/whatdoyouknowaboutgoodfruitpunch"],a[href|="/rsonatapunch"],a[href|="/rsdpunch"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%sonata-sheet%%)!important; background-position: -100% -200%;}
-
-a[href|="/sonatawoah"],a[href|="/sdwoah"],a[href|="/rsonatawoah"],a[href|="/rsdwoah"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%sonata-sheet%%)!important; background-position: -200% -200%;}
-
-a[href|="/sonataglee"],a[href|="/sdglee"],a[href|="/tacotuesday"],a[href|="/rsonataglee"],a[href|="/rsdglee"],a[href|="/rtacotuesday"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%sonata-sheet%%)!important; background-position: -300% -200%;}
-
-a[href|="/sonatasmug"],a[href|="/sdsmug"],a[href|="/rsonatasmug"],a[href|="/rsdsmug"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%sonata-sheet%%)!important; background-position: 0 -300%;}
-
-a[href|="/sonatawave"],a[href|="/sdwave"],a[href|="/rsonatawave"],a[href|="/rsdwave"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%sonata-sheet%%)!important; background-position: -100% -300%;}
-
-a[href|="/sonatalunch"],a[href|="/sdlunch"],a[href|="/rsonatalunch"],a[href|="/rsdlunch"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%sonata-sheet%%)!important; background-position: -200% -300%;}
-
-a[href|="/sonatawhatever"],a[href|="/sdwhatever"],a[href|="/rsonatawhatever"],a[href|="/rsdwhatever"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%sonata-sheet%%)!important; background-position: -300% -300%;}
-
-a[href|="/holdthatthought"],a[href|="/rholdthatthought"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%sonata-sheet%%)!important; background-position: 0 -400%;}
-
-a[href|="/noautotunesonata"],a[href|="/noautotunesd"],a[href|="/rnoautotunesonata"],a[href|="/rnoautotunesd"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%sonata-sheet%%)!important; background-position: -100% -400%;}
-
-a[href|="/sonatacrashingdown"],a[href|="/sdcrashingdown"],a[href|="/rsonatacrashingdown"],a[href|="/rsdcrashingdown"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%sonata-sheet%%)!important; background-position: -200% -400%;}
-
-a[href|="/sonatamad"],a[href|="/sdmad"],a[href|="/rsonatamad"],a[href|="/rsdmad"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%sonata-sheet%%)!important; background-position: -300% -400%;}
-
-a[href|="/sonatadance"],a[href|="/sddance"],a[href|="/rsonatadance"],a[href|="/rsddance"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%sonata-sheet%%)!important; background-position: 0 -500%;}
-
-a[href|="/sonataright"],a[href|="/sdright"],a[href|="/rsonataright"],a[href|="/rsdright"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%sonata-sheet%%)!important; background-position: -100% -500%;}
-
-a[href|="/putyourhandstogether"],a[href|="/rputyourhandstogether"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%sonata-sheet%%)!important; background-position: -200% -500%;}
-
-a[href|="/sonatasorry"],a[href|="/sdsorry"],a[href|="/rsonatasorry"],a[href|="/rsdsorry"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%sonata-sheet%%)!important; background-position: -300% -500%;}
-
-a[href|="/sonatapoint"],a[href|="/sdpoint"],a[href|="/rsonatapoint"],a[href|="/rsdpoint"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%sonata-sheet%%)!important; background-position: 0 -600%;}
-
-a[href|="/sonataevilgrin"],a[href|="/sdevilgrin"],a[href|="/rsonataevilgrin"],a[href|="/rsdevilgrin"]
-{display:block;clear:none;float:left;width:70px;height:70px;background-image:url(%%sonata-sheet%%)!important; background-position: -100% -600%;}
-
-a[href|="/sonatastanding"], a[href|="/sdstanding"], a[href|="/rsonatastanding"], a[href|="/rsdstanding"] {
+a[href|="/countesssing"], a[href|="/raramagic"], a[href|="/thecountess"], a[href|="/happyrara"], a[href|="/rarasing"], a[href|="/sadrara"], a[href|="/svengallop"], a[href|="/fillyrarasing"] {
   display: block;
   clear: none;
   float: left;
-  width: 41px;
-  height: 90px;
-  background-position: -0px -0px;
-  background-image: url(%%sonatastanding%%) !important;
+  width: 70px;
+  height: 70px;
+  cursor: default;
+  background-image: url(%%raramotes%%) !important;
 }
 
-a[href|="/sonatawalking"], a[href|="/sdwalking"], a[href|="/rsonatawalking"], a[href|="/rsdwalking"] {
+a[href|="/countesssing"] { background-position: 0 0 }
+a[href|="/raramagic"] { background-position: -70px 0 }
+a[href|="/thecountess"] { background-position: -140px 0 }
+a[href|="/happyrara"] { background-position: -210px 0 }
+a[href|="/rarasing"] { background-position: 0 -70px }
+a[href|="/sadrara"] { background-position: -70px -70px }
+a[href|="/svengallop"] { background-position: -140px -70px }
+a[href|="/fillyrarasing"] { background-position: -210px -70px }
+
+a[href|="/rarajackhug"] {
   display: block;
   clear: none;
   float: left;
-  width: 53px;
-  height: 90px;
-  background-position: -0px -0px;
-  background-image: url(%%sonatawalking%%) !important;
-}
-
-a[href|="/sonataposing"], a[href|="/sdposing"], a[href|="/rsonataposing"], a[href|="/rsdposing"] {
-  display: block;
-  clear: none;
-  float: left;
-  width: 44px;
-  height: 90px;
-  background-position: -0px -0px;
-  background-image: url(%%sonatapose%%) !important;
-}
-
-a[href|="/sonatapstanding"], a[href|="/sdpstanding"] {
-  display: block;
-  clear: none;
-  float: left;
-  width: 90px;
-  height: 90px;
-  background-position: -0px -0px;
-  background-image: url(%%sonatapstanding%%) !important;
-}
-
-a[href|="/sonatatrotting"], a[href|="/sdtrotting"] {
-  display: block;
-  clear: none;
-  float: left;
-  width: 88px;
-  height: 94px;
-  background-position: -0px -0px;
-  background-image: url(%%sonatatrotting%%) !important;
-}
-
-a[href|="/solnata"], a[href|="/soldiersd"] {
-  display: block;
-  clear: none;
-  float: left;
-  width: 118px;
-  height: 147px;
-  background-position: 0 0;
-  background-image: url(%%solnata%%) !important;
-}
-
-a[href|="/rsonatastanding"], a[href|="/rsdstanding"], a[href|="/rsonatawalking"], a[href|="/rsdwalking"], a[href|="/rsdposing"], a[href|="/rsonataposing"] {
-  -webkit-transform: scaleX(-1);
-  -moz-transform: scaleX(-1);
-  -ms-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  transform: scaleX(-1);
+  width: 100px;
+  height: 100px;
+  cursor: default;
+  background-image: url(%%raramotes100%%) !important;
 }
 
 START-PONYSCRIPT-IGNORE { color: red; }
