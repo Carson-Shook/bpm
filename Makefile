@@ -30,7 +30,7 @@
 # - Test
 # - Make thread
 
-VERSION = 66.236
+VERSION = 66.237
 
 CONTENT_SCRIPT := \
     addon/bpm-header.js addon/bpm-utils.js addon/bpm-browser.js \
@@ -137,6 +137,7 @@ build/chrome.zip: $(ADDON_DATA) addon/cr-background.html addon/cr-background.js
 	cp addon/pref-setup.js build/chrome
 
 	cp betterponymotes.pem build/chrome/key.pem
+	# Uncompressed due to prior difficulties with the webstore
 	cd build/chrome && zip -0 ../chrome.zip *
 
 build/BPM.safariextension: $(ADDON_DATA) addon/sf-Settings.plist addon/sf-background.html addon/sf-background.js
