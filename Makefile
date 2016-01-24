@@ -25,12 +25,13 @@
 # - Sign XPI
 # $ make www
 # $ make sync
+# - chmod 644
 # $ git ci -m "Bump version to x.y"
 # $ git push github master
 # - Test
 # - Make thread
 
-VERSION = 66.237
+VERSION = 66.238
 
 CONTENT_SCRIPT := \
     addon/bpm-header.js addon/bpm-utils.js addon/bpm-browser.js \
