@@ -29,6 +29,8 @@ var _console = find_global("console");
 var _gm_log = find_global("GM_log");
 var _raw_log;
 
+var CONTAINER_PADDING = 10;
+
 if(_console && _console.log) {
     _raw_log = _console.log.bind(_console);
 } else if(_gm_log) {
@@ -308,8 +310,17 @@ function make_movable(element, container, callback) {
         start_x = parseInt(container.style.left, 10);
         start_y = parseInt(container.style.top, 10);
     }, function(event, dx, dy) {
-        var left = Math.max(start_x + dx, 0);
-        var top = Math.max(start_y + dy, 0);
+        var container_width = parseInt(container.style.width, 10) || 0;
+        var container_height = parseInt(container.style.height, 10) || 0;
+
+        var minX = CONTAINER_PADDING;
+        var minY = CONTAINER_PADDING;
+
+        var maxX = window.innerWidth - container_width - CONTAINER_PADDING;
+        var maxY = window.innerHeight - container_height - CONTAINER_PADDING;
+
+        var left = Math.max(Math.min(start_x + dx, maxX), minX);
+        var top = Math.max(Math.min(start_y + dy, maxY), minY);
 
         function move() {
             container.style.left = left + "px";
@@ -322,6 +333,26 @@ function make_movable(element, container, callback) {
             move();
         }
     });
+}
+
+function keep_on_window(container) {
+    var start_x = parseInt(container.style.left, 10);
+    var start_y = parseInt(container.style.top, 10);
+
+    var container_width = parseInt(container.style.width, 10);
+    var container_height = parseInt(container.style.height, 10);
+
+    var minX = CONTAINER_PADDING;
+    var minY = CONTAINER_PADDING;
+
+    var maxX = window.innerWidth - container_width - CONTAINER_PADDING;
+    var maxY = window.innerHeight - container_height - CONTAINER_PADDING;
+
+    var left = Math.max(Math.min(start_x, maxX), minX);
+    var top = Math.max(Math.min(start_y, maxY), minY);
+
+    container.style.left = left + "px";
+    container.style.top = top + "px";
 }
 
 /*
