@@ -1,102 +1,102 @@
-/*** Thumbnails ***/
+/* 1: PAGE STYLE CHANGES*/
 
-.thumbnail:empty { background-image: url(%%thumbnails%%) !important }
-.thumbnail.self { background-position: -0px -120px !important }
-.thumbnail.nsfw { visibility: hidden !important }
-.thumbnail.default { background-position: -0px -70px !important }
+/* A: HEADER ETC.*/
 
-.linkflair-spoilers .thumbnail img { display: none }
+/* i: HEADER */
+#header {
+    background-image: url(%%banner%%);
+    border-bottom: 1px solid #000000;
+    height: 144px;
+    z-index: 0;
+    -moz-box-shadow: 0px 0px 10px #888;
+    -webkit-box-shadow: 0px 0px 10px #888;
+    box-shadow: 0px 0px 10px #888;
+    margin: 0px;
+    padding: 0;
+    border-bottom: none;
+    width: 100%;
+    }
 
-.linkflair-spoilers .thumbnail {
-  background-image: url(%%thumbnails%%) !important;
-  height: 70px;
-  background-position: 0 0 !important;
+/* ii: BOTTOM RIGHT */
+#header-bottom-right {
+    background-color: black;
+    -moz-border-radius-topleft: 7px;
+    -webkit-border-top-left-radius: 7px
+    }
+#header-bottom-right a {
+    color: white
+    }
+#header-bottom-right .separator {
+    color: gray
+    }
+
+/* iii: BOTTOM LEFT */
+#header-bottom-left {
+    z-index: -1;
+    font-size: larger;
+    position: absolute;
+    }
+
+/* iv: IMG */
+img#header-img{
+    left: 10px;
+    margin:0 0 -4px 0 !important;
+    z-index: -1;
+    }
+
+/* v: PAGE NAME */
+.pagename a {
+    font-size: 20px;
+    position: inherit;
+    text-indent: 0px;
+    }
+
+/* vi: TAB MENU */
+.tabmenu li.selected a {
+    color: #ffa6f2;
+    border: 1px solid #000000;
+    border-bottom: 1px solid white;
+    -moz-border-radius-topright: 0px;
+    -moz-border-radius-topleft: 0px;
+    -webkit-border-top-right-radius: 0px;
+    -webkit-border-top-left-radius: 0px
+    }
+.tabmenu li a {
+    color: #d579c3;
+    background-color: #ededed;
+    border: 1px solid black;
+    -moz-border-radius-topright: 0px;
+    -moz-border-radius-topleft: 0px;
+    -webkit-border-top-right-radius: 0px;
+    -webkit-border-top-left-radius: 0px
+    }
+
+/* vii: REDDIT NAME */
+.redditname {
+    text-shadow: 0 0 0.7em #fff, 0 0 0.7em #fff, 0 0 0.7em #fff
+    }
+.redditname a:hover {
+    text-shadow: 0 0 0.9em #fff, 0 0 0.9em #fff, 0 0 0.9em #fff, 0 0 0.9em #fff
+    }
+
+/* I: GREY ODD LINK BACKGROUNDS */
+
+.link.odd {
+    background: #f8f8f8;
+    border-radius: 10px;
+    border: 1px solid #E6E6E6
 }
-
-.linkflair-spoilers[data-fullname$="d"] .thumbnail, .linkflair-spoilers[data-fullname$="i"] .thumbnail,
-.linkflair-spoilers[data-fullname$="s"] .thumbnail, .linkflair-spoilers[data-fullname$="c"] .thumbnail,
-.linkflair-spoilers[data-fullname$="e"] .thumbnail, .linkflair-spoilers[data-fullname$="n"] .thumbnail,
-.linkflair-spoilers[data-fullname$="t"] .thumbnail, .linkflair-spoilers[data-fullname$="a"] .thumbnail { background-position: -0px -170px !important }
-
-.linkflair-spoilers .thumbnail.self { height: 64px !important; background-position: 0 -120px !important }
-
-/*** Rating Tags ***/
-
-.nsfw-stamp {
-  color: #5f99cf;
-  padding: 0px 3px !important;
-}
-
-.nsfw-stamp acronym{
-  display: inline-block;
-  font-size: 0px !important;
-}
-
-.nsfw-stamp acronym:after{
-  color: #336699 !important;
-  content: "PG" !important;
-  display: block;
-  font-size: x-small !important;
-  text-decoration: none;
-  margin-top: -14px;
-}
-
-.marknsfw-button a[href="#"], .unmarknsfw-button a[href="#"] {
-  font-size: 0px !important;
-  display: inline-block;
-  vertical-align: top;
-  overflow: hidden;
-  letter-spacing: -20px;
-  content: "";
-}
-
-.unmarknsfw-button a[href="#"]:before, .marknsfw-button a[href="#"]:before {
-  font-size: 9px !important;
-  display: block;
-  letter-spacing: normal;
-  content:"tag PG";
-}
-
-.unmarknsfw-button a[href="#"]:before { content:"un-tag PG" }
 
 /*** Theme ***/
 
-#header-img { margin: 2px 0px -2px 4px }
-
-.side h6 del { color: inherit }
-.side sup:nth-of-type(1) { padding-left: 40px }
-.side .usertext-body ul a { font-weight: bold }
-
 .subscribers .word, .users-online .word { display: none }
-.subscribers .number:after { content: " don't know that they fell" }
-.users-online .number:after { content: " under her spell" }
+.subscribers .number:after { content: " cellists" }
+.users-online .number:after { content: " in the orchestra pit" }
 
 .sidecontentbox .helplink + .title h1 { font-size: 0 !important }
-.sidecontentbox .helplink + .title h1:before { font-size: 10pt !important; content: "ROADIES" }
-.sidecontentbox .helplink+.title+.content li:nth-of-type(5n) { display: none }
+.sidecontentbox .helplink + .title h1:before { font-size: 10pt !important; content: "CONDUCTORS" }
 
 /*** Comments ***/
-
-a[href|="/spoiler"] {
-  background: #000 !important;
-  color: #000 !important;
-}
-
-a[href|="/spoiler"]:hover {
-    color: #fff !important;
-}
-
-a[href|="/asadagio"], a[href|="/asad"] {
-  color: #FE8800 !important;
-}
-
-a[href|="/asaria"], a[href|="/asab"] {
-  color: #692989 !important;
-}
-
-a[href|="/assonata"], a[href|="/assd"] {
-  color: #51ABC7 !important;
-}
 
 a[href|="/sp"] {
   display: inline-block;
@@ -110,7 +110,49 @@ a[href^="/"][href*="-in-"], a[href^="/"][href$="-in"], a[href^="/"][href*="-inp-
   display: inline-block !important;
 }
 
-/*** Emotes & Flair ***/
+a[href|="/spoiler"] {
+  background: #000 !important;
+  color: #000 !important;
+}
+
+a[href|="/spoiler"]:hover {
+  color: #fff !important;
+}
+
+a[href="/s"] {
+  color: #222222; 
+  background: #CCCCCC;
+  cursor: default;
+} 
+
+a[href="/s"]:hover {
+  color: #8F8F8F 
+} 
+
+a[href="/s"]::after { 
+  content: attr(title);
+  background: #CCCCCC;
+  color: #CCCCCC;
+  padding: 0px 10px 0px 10px;
+}
+
+a[href="/s"]:hover::after {
+  color: black;
+}
+
+/*** Arrows ***/
+
+.arrow.upmod, .arrow.downmod, .arrow.up, .arrow.down {
+  height: 16px;
+  background-image: url(%%taviarrows%%);
+}
+
+.arrow.upmod { background-position: 0 0 }
+.arrow.downmod { background-position: 0 -16px }
+.arrow.up { background-position: 0 -32px }
+.arrow.down { background-position: 0 -48px }
+
+.midcol .score { margin-right: 2px }
 
 /*---------------- Standardized Segment ----------------*/
 
@@ -516,171 +558,54 @@ a[href|="/applederp"],a[href|="/rapplederp"],a[href|="/ppseesyou"],a[href|="/rpp
 
 /*---------------- END COPY ----------------*/
 
-a[href|="/adagiosmirk"], a[href|="/adsmirk"], a[href|="/adagiodownvote"], a[href|="/addownvote"], a[href|="/failedaudition"], a[href|="/adagioreally"], a[href|="/adreally"], a[href|="/tickedadagio"], a[href|="/tickedad"], a[href|="/cooladagio"], a[href|="/coolad.png"], a[href|="/adagiowow"], a[href|="/adwow"], a[href|="/equestrianmagic"], a[href|="/adagiosings"], a[href|="/adsings"], a[href|="/adagiobattle"], a[href|="/adbattle"], a[href|="/awkwardadagio"], a[href|="/awkwardad"], a[href|="/adagiofacepalm"], a[href|="/adfacepalm"], a[href|="/adagiogrin"], a[href|="/adgrin"], a[href|="/adagioplease"], a[href|="/adplease"], a[href|="/adagiowelcome"], a[href|="/adwelcome"], a[href|="/welcometotheshow"] {
+a[href|="/omsmirk"], a[href|="/omlate"], a[href|="/omshocked"], a[href|="/omunsure"], a[href|="/omnervous"], a[href|="/omexcited"], a[href|="/omconfident"], a[href|="/omsing"], a[href|="/omknows"], a[href|="/omsalute"], a[href|="/omdistracted"], a[href|="/omsmug"], a[href|="/omannoyed"], a[href|="/omright"], a[href|="/omhappy"], a[href|="/omreally"], a[href|="/omeww"], a[href|="/omwant"], a[href|="/omdj"], a[href|="/omparty"], a[href|="/omblush"], a[href|="/omrough"], a[href|="/omchill"], a[href|="/omjoy"], a[href|="/ommad"], a[href|="/ompout"], a[href|="/omwhat"], a[href|="/omaside"], a[href|="/omlook"], a[href|="/omfrustrated"], a[href|="/omdisappointed"], a[href|="/omgasp"], a[href|="/omfiddle"], a[href|="/ominthezone"], a[href|="/omconcert"], a[href|="/ombow"], a[href|="/omconfused"], a[href|="/omshrug"] {
   display: block;
   clear: none;
   float: left;
   width: 70px;
   height: 70px;
   cursor: default;
-  background-image: url(%%adagiohmotes%%) !important;
+  background-image: url(%%tavimotes%%) !important;
 }
 
-a[href|="/radagiosmirk"], a[href|="/radsmirk"], a[href|="/radagiodownvote"], a[href|="/raddownvote"], a[href|="/rfailedaudition"], a[href|="/radagioreally"], a[href|="/radreally"], a[href|="/rtickedadagio"], a[href|="/rtickedad"], a[href|="/rcooladagio"], a[href|="/rcoolad.png"], a[href|="/radagiowow"], a[href|="/radwow"], a[href|="/requestrianmagic"], a[href|="/radagiosings"], a[href|="/radsings"], a[href|="/radagiobattle"], a[href|="/radbattle"], a[href|="/rawkwardadagio"], a[href|="/rawkwardad"], a[href|="/radagiofacepalm"], a[href|="/radfacepalm"], a[href|="/radplease"], a[href|="/radagioplease"], a[href|="/radagiowelcome"], a[href|="/radwelcome"], a[href|="/rwelcometotheshow"] {
-  display: block;
-  clear: none;
-  float: left;
-  width: 70px;
-  height: 70px;
-  cursor: default;
-  background-image: url(%%adagiohmotes%%) !important;
-  -webkit-transform: scaleX(-1);
-  -moz-transform: scaleX(-1);
-  -ms-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  transform: scaleX(-1);
-}
-
-a[href|="/adagiowelcome"], a[href|="/adwelcome"], a[href|="/welcometotheshow"], a[href|="/radagiowelcome"], a[href|="/radwelcome"], a[href|="/rwelcometotheshow"] {
-  width: 93px;
-}
-
-a[href|="/adagiosmirk"], a[href|="/radagiosmirk"], a[href|="/adsmirk"], a[href|="/radsmirk"] { background-position: -0px -0px; }
-a[href|="/adagiodownvote"], a[href|="/radagiodownvote"], a[href|="/addownvote"], a[href|="/raddownvote"], a[href|="/failedaudition"], a[href|="/rfailedaudition"] { background-position: -70px -0px; }
-a[href|="/adagioreally"], a[href|="/radagioreally"], a[href|="/adreally"], a[href|="/radreally"] { background-position: -140px -0px; }
-a[href|="/tickedadagio"], a[href|="/rtickedadagio"], a[href|="/tickedad"], a[href|="/rtickedad"] { background-position: -210px -0px; }
-a[href|="/cooladagio"], a[href|="/rcooladagio"], a[href|="/coolad.png"], a[href|="/rcoolad.png"] { background-position: -0px -70px; }
-a[href|="/adagiowow"], a[href|="/radagiowow"], a[href|="/adwow"], a[href|="/radwow"], a[href|="/equestrianmagic"], a[href|="/requestrianmagic"] { background-position: -70px -70px; }
-a[href|="/adagiosings"], a[href|="/radagiosings"], a[href|="/adsings"], a[href|="/radsings"] { background-position: -140px -70px; }
-a[href|="/adagiowelcome"], a[href|="/radagiowelcome"], a[href|="/adwelcome"], a[href|="/radwelcome"], a[href|="/welcometotheshow"], a[href|="/rwelcometotheshow"] { background-position: -210px -70px; }
-a[href|="/adagiobattle"], a[href|="/radagiobattle"], a[href|="/adbattle"], a[href|="/radbattle"] { background-position: -0px -140px; }
-a[href|="/awkwardadagio"], a[href|="/rawkwardadagio"], a[href|="/awkwardad"], a[href|="/rawkwardad"] { background-position: -70px -140px; }
-a[href|="/adagiofacepalm"], a[href|="/radagiofacepalm"], a[href|="/adfacepalm"], a[href|="/radfacepalm"] { background-position: -140px -140px; }
-a[href|="/adagiogrin"], a[href|="/adgrin"] { background-position: -210px -140px; }
-a[href|="/adagioplease"], a[href|="/adplease"], a[href|="/radagioplease"], a[href|="/radplease"] { background-position: -0px -210px; }
-
-a[href|="/adagiosmile"], a[href|="/adsmile"], a[href|="/adagiolook"], a[href|="/adlook"], a[href|="/confidentadagio"], a[href|="/confidentad"], a[href|="/adagiorage"], a[href|="/adrage"], a[href|="/adagioponyshrug"], a[href|="/adpshrug"], a[href|="/adagiohmmm"], a[href|="/adhmmm"], a[href|="/adagiowhat"], a[href|="/adwhat"], a[href|="/adagiolean"], a[href|="/adlean"], a[href|="/adagioright"], a[href|="/adright"], a[href|="/adagiosad"], a[href|="/adsad"] {
-  display: block;
-  clear: none;
-  float: left;
-  width: 70px;
-  height: 70px;
-  cursor: default;
-  background-image: url(%%adagiopmotes%%) !important;
-}
-
-a[href|="/radagiosmile"], a[href|="/radsmile"], a[href|="/radagiolook"], a[href|="/radlook"], a[href|="/rconfidentadagio"], a[href|="/rconfidentad"], a[href|="/radagiorage"], a[href|="/radrage"], a[href|="/radagioponyshrug"], a[href|="/radpshrug"] {
-  display: block;
-  clear: none;
-  float: left;
-  width: 70px;
-  height: 70px;
-  background-image: url(%%adagiopmotes%%) !important;
-  -webkit-transform: scaleX(-1);
-  -moz-transform: scaleX(-1);
-  -ms-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  transform: scaleX(-1);
-}
-
-a[href|="/adagiosmile"], a[href|="/radagiosmile"], a[href|="/adsmile"], a[href|="/radsmile"] { background-position: -0px -0px; }
-a[href|="/adagiolook"], a[href|="/radagiolook"], a[href|="/adlook"], a[href|="/radlook"] { background-position: -70px -0px; }
-a[href|="/confidentadagio"], a[href|="/rconfidentadagio"], a[href|="/confidentad"], a[href|="/rconfidentad"] { background-position: -140px -0px; }
-a[href|="/adagiorage"], a[href|="/adrage"], a[href|="/radagiorage"], a[href|="/radrage"] { background-position: -210px -0px; }
-a[href|="/adagioponyshrug"], a[href|="/adpshrug"], a[href|="/radagioponyshrug"], a[href|="/radpshrug"] { background-position: -0px -70px; }
-a[href|="/adagiohmmm"], a[href|="/adhmmm"] { background-position: -70px -70px; }
-a[href|="/adagiowhat"], a[href|="/adwhat"] { background-position: -140px -70px; }
-a[href|="/adagiolean"], a[href|="/adlean"] { background-position: -210px -70px; }
-a[href|="/adagioright"], a[href|="/adright"] { background-position: -0px -140px; }
-a[href|="/adagiosad"], a[href|="/adsad"] { background-position: -70px -140px; }
-
-a[href|="/adagiopoof"], a[href|="/adpoof"] {
-  display: block;
-  clear: none;
-  float: left;
-  width: 136px;
-  height: 120px;
-  cursor: default;
-  background-image: url(%%poof%%) !important;
-}
-
-a[href|="/adagiostanding"], a[href|="/adstanding"], a[href|="/radagiostanding"], a[href|="/radstanding"] {
-  display: block;
-  clear: none;
-  float: left;
-  width: 38px;
-  height: 90px;
-  cursor: default;
-  background-image: url(%%adagiostanding%%) !important;
-}
-
-a[href|="/adagiowalking"], a[href|="/adwalking"], a[href|="/radagiowalking"], a[href|="/radwalking"] {
-  display: block;
-  clear: none;
-  float: left;
-  width: 50px;
-  height: 90px;
-  cursor: default;
-  background-image: url(%%adagiowalking%%) !important;
-}
-
-a[href|="/radagiostanding"], a[href|="/radstanding"], a[href|="/radagiowalking"], a[href|="/radwalking"] {
-  -webkit-transform: scaleX(-1);
-  -moz-transform: scaleX(-1);
-  -ms-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  transform: scaleX(-1);
-}
-
-a[href|="/adagiopstanding"], a[href|="/adpstanding"] {
-  display: block;
-  clear: none;
-  float: left;
-  width: 84px;
-  height: 88px;
-  cursor: default;
-  background-image: url(%%adagiopstanding%%) !important;
-}
-
-a[href|="/adagiotrotting"], a[href|="/adtrotting"] {
-  display: block;
-  clear: none;
-  float: left;
-  width: 84px;
-  height: 92px;
-  cursor: default;
-  background-image: url(%%adagiotrotting%%) !important;
-}
-
-a[href|="/adagiosmug"], a[href|="/adsmug"] {
-  display: block;
-  clear: none;
-  float: left;
-  width: 40px;
-  height: 91px;
-  cursor: default;
-  background-image: url(%%adsmug%%) !important
-}
-
-a[href|="/sirenadagio"], a[href|="/sirenad"] {
-  display: block;
-  clear: none;
-  float: left;
-  width: 70px;
-  height: 125px;
-  cursor: default;
-  background-image: url(%%adsiren%%) !important
-}
-
-a[href|="/adagiopoweredup"], a[href|="/adpoweredup"] {
-  display: block;
-  clear: none;
-  float: left;
-  width: 82px;
-  height: 95px;
-  cursor: default;
-  background-image: url(%%adpoweredup%%) !important
-}
+a[href|="/omsmirk"] { background-position: 0 0; }
+a[href|="/omlate"] { background-position: -70px 0; }
+a[href|="/omshocked"] { background-position: -140px 0; }
+a[href|="/omunsure"] { background-position: -210px 0; }
+a[href|="/omnervous"] { background-position: 0 -70px; }
+a[href|="/omexcited"] { background-position: -70px -70px; }
+a[href|="/omconfident"] { background-position: -140px -70px; }
+a[href|="/omsing"] { background-position: -210px -70px; }
+a[href|="/omknows"] { background-position: 0 -140px; }
+a[href|="/omsalute"] { background-position: -70px -140px; }
+a[href|="/omdistracted"] { background-position: -140px -140px; }
+a[href|="/omsmug"] { background-position: -210px -140px; }
+a[href|="/omannoyed"] { background-position: 0 -210px; }
+a[href|="/omright"] { background-position: -70px -210px; }
+a[href|="/omhappy"] { background-position: -140px -210px; }
+a[href|="/omreally"] { background-position: -210px -210px; }
+a[href|="/omeww"] { background-position: 0 -280px; }
+a[href|="/omwant"] { background-position: -70px -280px; }
+a[href|="/omdj"] { background-position: -140px -280px; }
+a[href|="/omparty"] { background-position: -210px -280px; }
+a[href|="/omblush"] { background-position: 0 -350px; }
+a[href|="/omrough"] { background-position: -70px -350px; }
+a[href|="/omchill"] { background-position: -140px -350px; }
+a[href|="/omjoy"] { background-position: -210px -350px; }
+a[href|="/ommad"] { background-position: 0 -420px; }
+a[href|="/ompout"] { background-position: -70px -420px; }
+a[href|="/omwhat"] { background-position: -140px -420px; }
+a[href|="/omaside"] { background-position: -210px -420px; }
+a[href|="/omlook"] { background-position: 0 -490px; }
+a[href|="/omfrustrated"] { background-position: -70px -490px; }
+a[href|="/omdisappointed"] { background-position: -140px -490px; }
+a[href|="/omgasp"] { background-position: -210px -490px; }
+a[href|="/omfiddle"] { background-position: 0 -560px; }
+a[href|="/ominthezone"] { background-position: -70px -560px; }
+a[href|="/omconcert"] { background-position: -140px -560px; }
+a[href|="/ombow"] { background-position: -210px -560px; }
+a[href|="/omconfused"] { background-position: 0 -630px; }
+a[href|="/omshrug"] { background-position: -70px -630px; }
 
 START-PONYSCRIPT-IGNORE { color: red; }
 
