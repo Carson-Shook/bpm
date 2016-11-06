@@ -31,7 +31,7 @@
 # - Test
 # - Make thread
 
-VERSION = 66.251
+VERSION = 66.252
 
 CONTENT_SCRIPT := \
     addon/bpm-header.js addon/bpm-utils.js addon/bpm-browser.js \
@@ -104,6 +104,7 @@ build/betterponymotes.xpi: $(ADDON_DATA) addon/fx-main.js addon/fx-install.rdf
 	cp addon/bpmotes.css build/firefox/data
 	cp addon/combiners-nsfw.css build/firefox/data
 	cp addon/extracss-pure.css build/firefox/data
+	cp addon/extracss-webkit.css build/firefox/data
 	cp addon/options.css build/firefox/data
 	cp addon/options.html build/firefox/data
 	cp addon/options.js build/firefox/data
