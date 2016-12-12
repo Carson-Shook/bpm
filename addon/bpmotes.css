@@ -140,6 +140,15 @@
     margin: 2px !important;
 }
 
+/*
+ * Emotes button on mod.reddit.com. Float left because new modmail
+ * has the button on the other side of the textfield.
+ */
+.bpm-search-toggle.Button {
+    margin: 0 12px 0 0 !important;
+    float: left;
+}
+
 /* Emotes button on Voat. */
 .bpm-search-toggle.bpm-voat {
     margin-left: 1px;
@@ -385,8 +394,8 @@ word-break:normal;}
 .bpm-emote {pointer-events:auto!important}
 
 /* Bugfix: Some subreddits display circles around minmized emote objects */
-.bpm-emote:before {display:none!important}
-.bpm-emote:after {display:none!important}
+.bpm-emote:before {border-style:none!important}
+.bpm-emote:after {border-style:none!important}
 
 /* Bugfix: Wikipedia expandos show hidden text by links (RES) */
 .res-media-host-wikipedia .bpm-alttext {display:none}
