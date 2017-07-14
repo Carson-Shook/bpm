@@ -72,15 +72,7 @@ build/betterponymotes.js: $(CONTENT_SCRIPT)
 	mkdir -p build
 	cat $(CONTENT_SCRIPT) > build/betterponymotes.js
 
-<<<<<<< HEAD
-build/gif-animotes.css: $(EMOTE_DATA)
-	mkdir -p build
-	./dlanimotes.py
-
-build/bpm-resources.js build/emote-classes.css: $(EMOTE_DATA) bpgen.py
-=======
 build/bpm-resources.js build/emote-classes.css: $(EMOTE_DATA)
->>>>>>> Rothera/master
 	mkdir -p build
 	./bpgen.py
 
