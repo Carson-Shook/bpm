@@ -48,9 +48,9 @@
 body { background: url(%%background%%) no-repeat center }
 body.wiki-page { background: none }
 
-/*START-TACOS{color:red}
+START-TACOS{color:red}
 body { background: url(%%humantuesday%%) no-repeat fixed center bottom }
-END-TACOS{color:red}*/
+END-TACOS{color:red}
 
 .subscribers .word, .users-online .word { display: none }
 .subscribers .number:after { content: " admirers" }
@@ -566,7 +566,7 @@ a[href|="/sonatasad"], a[href|="/sdsad"] { background-position: 0 -300%; }
 
 /*human*/
 
-a[href|="/sonatabattle"], a[href|="/sdbattle"], a[href|="/sonatagrin"], a[href|="/sdgrin"], a[href|="/naivesonata"], a[href|="/naivesd"], a[href|="/sonatasmirk"], a[href|="/sdsmirk"], a[href|="/sonatasiren"], a[href|="/sdsiren"], a[href|="/sonatashrug"], a[href|="/sdshrug"], a[href|="/cutesonata"], a[href|="/cutesd"], a[href|="/confidentsonata"], a[href|="/confidentsd"], a[href|="/fearfulsonata"], a[href|="/fearfulsd"], a[href|="/sonatapunch"], a[href|="/sdpunch"], a[href|="/whatdoyouknowaboutgoodfruitpunch"], a[href|="/sonatawoah"], a[href|="/sdwoah"], a[href|="/sonataglee"], a[href|="/sdglee"], a[href|="/tacotuesday"], a[href|="/sonatasmug"], a[href|="/sdsmug"], a[href|="/sonatawave"], a[href|="/sdwave"], a[href|="/sonatalunch"], a[href|="/sdlunch"], a[href|="/sonatawhatever"], a[href|="/sdwhatever"], a[href|="/holdthatthought"], a[href|="/noautotunesonata"], a[href|="/noautotunesd"], a[href|="/sonatacrashingdown"], a[href|="/sdcrashingdown"], a[href|="/sonatamad"], a[href|="/sdmad"], a[href|="/sonatadance"], a[href|="/sddance"], a[href|="/sonataright"], a[href|="/sdright"], a[href|="/putyourhandstogether"], a[href|="/sonatasorry"], a[href|="/sdsorry"], a[href|="/sonatapoint"], a[href|="/sdpoint"], a[href|="/sonataevilgrin"], a[href|="/sdevilgrin"] {
+a[href|="/sonatabattle"], a[href|="/sdbattle"], a[href|="/sonatagrin"], a[href|="/sdgrin"], a[href|="/naivesonata"], a[href|="/naivesd"], a[href|="/sonatasmirk"], a[href|="/sdsmirk"], a[href|="/sonatasiren"], a[href|="/sdsiren"], a[href|="/sonatashrug"], a[href|="/sdshrug"], a[href|="/cutesonata"], a[href|="/cutesd"], a[href|="/confidentsonata"], a[href|="/confidentsd"], a[href|="/fearfulsonata"], a[href|="/fearfulsd"], a[href|="/sonatapunch"], a[href|="/sdpunch"], a[href|="/whatdoyouknowaboutgoodfruitpunch"], a[href|="/sonatawoah"], a[href|="/sdwoah"], a[href|="/sonataglee"], a[href|="/sdglee"], a[href|="/tacotuesday"], a[href|="/sonatasmug"], a[href|="/sdsmug"], a[href|="/sonatawave"], a[href|="/sdwave"], a[href|="/sonatalunch"], a[href|="/sdlunch"], a[href|="/sonatawhatever"], a[href|="/sdwhatever"], a[href|="/holdthatthought"], a[href|="/noautotunesonata"], a[href|="/noautotunesd"], a[href|="/sonatacrashingdown"], a[href|="/sdcrashingdown"], a[href|="/sonatamad"], a[href|="/sdmad"], a[href|="/sonatadance"], a[href|="/sddance"], a[href|="/sonataright"], a[href|="/sdright"], a[href|="/putyourhandstogether"], a[href|="/sonatasorry"], a[href|="/sdsorry"], a[href|="/sonatapoint"], a[href|="/sdpoint"], a[href|="/sonataevilgrin"], a[href|="/sdevilgrin"], a[href|="/pleasantsonata"], a[href|="/pleasantsd"], a[href|="/confusedsonata"], a[href|="/confusedsd"], a[href|="/powerfulsonata"], a[href|="/powerfulsd"] {
   display: block;
   clear: none;
   float: left;
@@ -617,6 +617,9 @@ a[href|="/putyourhandstogether"], a[href|="/rputyourhandstogether"] { background
 a[href|="/sonatasorry"], a[href|="/sdsorry"], a[href|="/rsonatasorry"], a[href|="/rsdsorry"] { background-position: -300% -500%; }
 a[href|="/sonatapoint"], a[href|="/sdpoint"], a[href|="/rsonatapoint"], a[href|="/rsdpoint"] { background-position: 0 -600%; }
 a[href|="/sonataevilgrin"], a[href|="/sdevilgrin"], a[href|="/rsonataevilgrin"], a[href|="/rsdevilgrin"] { background-position: -100% -600%; }
+a[href|="/pleasantsonata"], a[href|="/pleasantsd"] { background-position: -200% -600% }
+a[href|="/confusedsonata"], a[href|="/confusedsd"] { background-position: -300% -600% }
+a[href|="/powerfulsonata"], a[href|="/powerfulsd"] { background-position: 0 -700% }
 
 /*special*/
 

@@ -57,6 +57,7 @@ Subreddits:
 - cuttershy
 - daylightemotes
 - desktopponies
+- dinkymotes
 - discord
 - equestriagirls
 - falloutequestria
@@ -83,6 +84,7 @@ Subreddits:
 - lyra
 - lyraquisition
 - marmemotes
+- marshmallow
 - maudpie
 - minuette
 - mlas1animotes
@@ -168,6 +170,7 @@ Subreddits:
 - shymotes
 - sillynumptie
 - sombra
+- somnambula
 - sonatadusk
 - spanishmeerkat
 - speedingturtle
@@ -194,6 +197,7 @@ Subreddits:
 - twidashmotes
 - twilightsparkle
 - twiquisition
+- twistarlight
 - vinylscratch
 - zephyrbreeze
 - zponymotes
@@ -290,7 +294,9 @@ Conflicts:
   /pikachu:       r/ponymotes             # Conflict with r/tacoshy
   /ppnervous:     r/pinkiepie             # Conflict with r/mlpdrawingschool
   /rabwant:       r/mylittlelivestream    # Conflict with r/applebloom
+  /raricatmallow: r/ponymotes             # Conflict with r/marshmallow
   /raricoffee:    r/onetrueprincess       # Conflict with r/marmemotes
+  /rarimallow:    r/equestriagirls        # Conflict with r/marshmallow
   /rwoonajuice:   r/mylittledaww          # Duplicated to r/mylittleanime
   /s:             r/falloutequestria      # Conflict with r/mylittleanime
   /sadlyra:       r/mylittleonions        # Conflict with r/mylittleanime
