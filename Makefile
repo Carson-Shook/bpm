@@ -31,7 +31,7 @@
 # - Test
 # - Make thread
 
-VERSION = 66.265
+VERSION = 66.266
 
 CONTENT_SCRIPT := \
     addon/bpm-header.js addon/bpm-utils.js addon/bpm-browser.js \
@@ -69,8 +69,9 @@ www: web/* build/betterponymotes-$(VERSION).xpi build/betterponymotes.update.rdf
 	cp build/betterponymotes-$(VERSION)-an+fx.xpi www/we/betterponymotes-$(VERSION)-an+fx.xpi
 
 sync:
-	chmod 644 www/* www/we/* www/xul/*
+	chmod 644 www/*
 	chmod 755 www/we www/xul
+	chmod 644 www/we/* www/xul/*
 	chmod 644 animotes/*
 	rsync -e "ssh -p 40719" -zvLr --delete www/ lyra@ponymotes.net:/var/www/ponymotes.net/bpm
 	rsync -e "ssh -p 40719" -zvLr --delete animotes/ lyra@ponymotes.net:/var/www/ponymotes.net/animotes

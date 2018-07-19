@@ -81,6 +81,7 @@ Subreddits:
 - ilovedashie
 - katiemotes
 - kingemotes
+- kingemotesii
 - lyra
 - lyraquisition
 - marmemotes
@@ -186,6 +187,7 @@ Subreddits:
 - taviquisition
 - tbpimagedump
 - tbpimagedump2
+- tempestshadow
 - thebelletower
 - thebestpony
 - thecane
@@ -259,7 +261,10 @@ Sorting:
 - [r/mylittlemusician, r/mylittlelistentothis] # Copies of some emotes
 
 Conflicts:
+  /abdoubt:       r/ariablaze             # Conflict with r/thebelletower
+  /abhappy:       r/bloomjackquisition    # Conflict with r/thebelletower
   /absing:        r/bloomjackquisition    # Conflict with r/ariablaze
+  /abstanding:    r/ariablaze             # Conflict with r/thebelletower
   /abwant:        r/mylittlelivestream    # Conflict with r/applebloom
   /abreally:      r/ariablaze             # Conflict with r/bloomjackquisition
   /abworry:       r/tbpimagedump          # Conflict with r/mlpdrawingschool
